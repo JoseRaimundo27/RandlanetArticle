@@ -1,0 +1,35 @@
+{
+  "train": [
+    "bridge_10_cb_faro.npz",
+    "bridge_11_fr_rtc.npz",
+    "bridge_12_fr_blk.npz",
+    "bridge_12_fr_rtc.npz",
+    "bridge_15_fr_blk.npz",
+    "bridge_15_fr_rtc.npz",
+    "bridge_16_fr_blk.npz",
+    "bridge_16_fr_rtc.npz",
+    "bridge_18_fr_blk.npz",
+    "bridge_18_fr_rtc.npz",
+    "bridge_19_fr_blk.npz",
+    "bridge_19_fr_rtc.npz",
+    "bridge_1_cb_faro.npz",
+    "bridge_2_cb_faro.npz",
+    "bridge_4_cb_faro.npz",
+    "bridge_6_cb_faro.npz",
+    "bridge_9_cb_faro.npz"
+  ],
+  "val": [
+    "bridge_14_fr_rtc.npz",
+    "bridge_17_fr_blk.npz",
+    "bridge_17_fr_rtc.npz",
+    "bridge_3_cb_faro.npz",
+    "bridge_8_cb_faro.npz"
+  ],
+  "test": [
+    "bridge_13_fr_blk.npz",
+    "bridge_13_fr_rtc.npz",
+    "bridge_20_fr_rtc.npz",
+    "bridge_5_cb_faro.npz",
+    "bridge_7_cb_faro.npz"
+  ]
+}

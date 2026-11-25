@@ -1,0 +1,103 @@
+nohup: ignoring input
+device=cuda | cena treino/val: 17/5 | cfg={'num_points': 40960, 'use_rgb': True, 'd_in': 6}
+freq ambiente/ponte: [0.7651, 0.2349] | pesos da perda: [0.7129999995231628, 1.2869999408721924]
+{"epoca": 1, "loss": 0.5370224703550339, "lr": 0.0095, "tempo_s": 28.2}
+{"epoca": 2, "loss": 0.337413099527359, "lr": 0.009025, "tempo_s": 26.6}
+{"epoca": 3, "loss": 0.23422515299916266, "lr": 0.00857375, "tempo_s": 26.7}
+{"epoca": 4, "loss": 0.19148222182691096, "lr": 0.0081450625, "tempo_s": 26.7}
+{"epoca": 5, "loss": 0.13637366826832295, "lr": 0.007737809374999999, "tempo_s": 26.9, "val_iou_ambiente": 0.8843, "val_iou_ponte": 0.7333, "val_miou": 0.8088, "val_precisao_ponte": 0.7391, "val_recall_ponte": 0.9894, "val_f1_ponte": 0.8461, "val_acc_global": 0.9122, "melhor": true}
+{"epoca": 6, "loss": 0.1287443865723908, "lr": 0.007350918906249998, "tempo_s": 26.5}
+{"epoca": 7, "loss": 0.10449182885885239, "lr": 0.006983372960937498, "tempo_s": 26.5}
+{"epoca": 8, "loss": 0.11624222024902701, "lr": 0.006634204312890623, "tempo_s": 26.6}
+{"epoca": 9, "loss": 0.10981712330505251, "lr": 0.006302494097246091, "tempo_s": 26.6}
+{"epoca": 10, "loss": 0.092682421926409, "lr": 0.005987369392383786, "tempo_s": 26.7, "val_iou_ambiente": 0.9463, "val_iou_ponte": 0.8553, "val_miou": 0.9008, "val_precisao_ponte": 0.8638, "val_recall_ponte": 0.9887, "val_f1_ponte": 0.922, "val_acc_global": 0.9592, "melhor": true}
+{"epoca": 11, "loss": 0.08779017929360271, "lr": 0.005688000922764597, "tempo_s": 26.5}
+{"epoca": 12, "loss": 0.08364003425091505, "lr": 0.005403600876626367, "tempo_s": 26.9}
+{"epoca": 13, "loss": 0.07273608445748687, "lr": 0.005133420832795048, "tempo_s": 27.7}
+{"epoca": 14, "loss": 0.06668039804697037, "lr": 0.0048767497911552955, "tempo_s": 28.2}
+{"epoca": 15, "loss": 0.07117663871310652, "lr": 0.00463291230159753, "tempo_s": 27.6, "val_iou_ambiente": 0.9597, "val_iou_ponte": 0.8864, "val_miou": 0.9231, "val_precisao_ponte": 0.9022, "val_recall_ponte": 0.9806, "val_f1_ponte": 0.9398, "val_acc_global": 0.9694, "melhor": true}
+{"epoca": 16, "loss": 0.07205066413804889, "lr": 0.0044012666865176535, "tempo_s": 26.9}
+{"epoca": 17, "loss": 0.07798963855952025, "lr": 0.004181203352191771, "tempo_s": 26.8}
+{"epoca": 18, "loss": 0.06272179635986685, "lr": 0.003972143184582182, "tempo_s": 26.8}
+{"epoca": 19, "loss": 0.058608824132010344, "lr": 0.0037735360253530726, "tempo_s": 26.7}
+{"epoca": 20, "loss": 0.05876974795199931, "lr": 0.0035848592240854188, "tempo_s": 26.9, "val_iou_ambiente": 0.9699, "val_iou_ponte": 0.9128, "val_miou": 0.9413, "val_precisao_ponte": 0.9283, "val_recall_ponte": 0.982, "val_f1_ponte": 0.9544, "val_acc_global": 0.9771, "melhor": true}
+{"epoca": 21, "loss": 0.060683481954038145, "lr": 0.0034056162628811476, "tempo_s": 26.8}
+{"epoca": 22, "loss": 0.05846324865147472, "lr": 0.0032353354497370902, "tempo_s": 26.7}
+{"epoca": 23, "loss": 0.052190079608932134, "lr": 0.0030735686772502355, "tempo_s": 26.9}
+{"epoca": 24, "loss": 0.050367496451362966, "lr": 0.0029198902433877237, "tempo_s": 26.8}
+{"epoca": 25, "loss": 0.07012984340451658, "lr": 0.0027738957312183374, "tempo_s": 26.8, "val_iou_ambiente": 0.9765, "val_iou_ponte": 0.9299, "val_miou": 0.9532, "val_precisao_ponte": 0.953, "val_recall_ponte": 0.9746, "val_f1_ponte": 0.9637, "val_acc_global": 0.9821, "melhor": true}
+{"epoca": 26, "loss": 0.04863546725176275, "lr": 0.0026352009446574203, "tempo_s": 26.8}
+{"epoca": 27, "loss": 0.04813793078064919, "lr": 0.002503440897424549, "tempo_s": 28.3}
+{"epoca": 28, "loss": 0.05409577113389969, "lr": 0.0023782688525533216, "tempo_s": 27.1}
+{"epoca": 29, "loss": 0.04925375148467719, "lr": 0.0022593554099256553, "tempo_s": 27.0}
+{"epoca": 30, "loss": 0.04526619026064873, "lr": 0.0021463876394293723, "tempo_s": 27.1, "val_iou_ambiente": 0.9748, "val_iou_ponte": 0.9256, "val_miou": 0.9502, "val_precisao_ponte": 0.9457, "val_recall_ponte": 0.9776, "val_f1_ponte": 0.9614, "val_acc_global": 0.9808}
+{"epoca": 31, "loss": 0.046831569858826694, "lr": 0.0020390682574579037, "tempo_s": 27.0}
+{"epoca": 32, "loss": 0.04600997375044972, "lr": 0.0019371148445850085, "tempo_s": 26.8}
+{"epoca": 33, "loss": 0.04784739911928773, "lr": 0.0018402591023557579, "tempo_s": 26.9}
+{"epoca": 34, "loss": 0.043652379671111706, "lr": 0.0017482461472379698, "tempo_s": 27.0}
+{"epoca": 35, "loss": 0.04436162743903697, "lr": 0.0016608338398760713, "tempo_s": 27.0, "val_iou_ambiente": 0.9702, "val_iou_ponte": 0.9136, "val_miou": 0.9419, "val_precisao_ponte": 0.929, "val_recall_ponte": 0.9822, "val_f1_ponte": 0.9549, "val_acc_global": 0.9774}
+{"epoca": 36, "loss": 0.040460477337241174, "lr": 0.0015777921478822676, "tempo_s": 26.9}
+{"epoca": 37, "loss": 0.04238555549271405, "lr": 0.001498902540488154, "tempo_s": 27.1}
+{"epoca": 38, "loss": 0.04176523266918957, "lr": 0.0014239574134637463, "tempo_s": 27.0}
+{"epoca": 39, "loss": 0.03721143453009427, "lr": 0.0013527595427905588, "tempo_s": 26.9}
+{"epoca": 40, "loss": 0.04317230060230941, "lr": 0.0012851215656510308, "tempo_s": 26.8, "val_iou_ambiente": 0.9774, "val_iou_ponte": 0.9326, "val_miou": 0.955, "val_precisao_ponte": 0.9527, "val_recall_ponte": 0.9779, "val_f1_ponte": 0.9651, "val_acc_global": 0.9828, "melhor": true}
+{"epoca": 41, "loss": 0.04166195666790008, "lr": 0.0012208654873684791, "tempo_s": 27.0}
+{"epoca": 42, "loss": 0.04175245389342308, "lr": 0.0011598222130000551, "tempo_s": 27.0}
+{"epoca": 43, "loss": 0.040846255206968635, "lr": 0.0011018311023500522, "tempo_s": 27.0}
+{"epoca": 44, "loss": 0.03888430468831211, "lr": 0.0010467395472325495, "tempo_s": 27.0}
+{"epoca": 45, "loss": 0.03778148324321955, "lr": 0.000994402569870922, "tempo_s": 27.3, "val_iou_ambiente": 0.9763, "val_iou_ponte": 0.93, "val_miou": 0.9532, "val_precisao_ponte": 0.9464, "val_recall_ponte": 0.9818, "val_f1_ponte": 0.9638, "val_acc_global": 0.982}
+{"epoca": 46, "loss": 0.04547482917830348, "lr": 0.0009446824413773759, "tempo_s": 26.9}
+{"epoca": 47, "loss": 0.04751937685161829, "lr": 0.0008974483193085071, "tempo_s": 27.0}
+{"epoca": 48, "loss": 0.03948866605106741, "lr": 0.0008525759033430817, "tempo_s": 27.0}
+{"epoca": 49, "loss": 0.04487168279103935, "lr": 0.0008099471081759276, "tempo_s": 27.0}
+{"epoca": 50, "loss": 0.034542098528938366, "lr": 0.0007694497527671312, "tempo_s": 27.1, "val_iou_ambiente": 0.9782, "val_iou_ponte": 0.9351, "val_miou": 0.9567, "val_precisao_ponte": 0.9548, "val_recall_ponte": 0.9784, "val_f1_ponte": 0.9664, "val_acc_global": 0.9834, "melhor": true}
+{"epoca": 51, "loss": 0.0411542861238122, "lr": 0.0007309772651287747, "tempo_s": 26.9}
+{"epoca": 52, "loss": 0.03696868390822783, "lr": 0.0006944284018723359, "tempo_s": 27.1}
+{"epoca": 53, "loss": 0.03505677817296237, "lr": 0.0006597069817787191, "tempo_s": 27.1}
+{"epoca": 54, "loss": 0.04010656235180795, "lr": 0.0006267216326897832, "tempo_s": 27.0}
+{"epoca": 55, "loss": 0.03442949856072664, "lr": 0.000595385551055294, "tempo_s": 27.0, "val_iou_ambiente": 0.977, "val_iou_ponte": 0.9317, "val_miou": 0.9543, "val_precisao_ponte": 0.9503, "val_recall_ponte": 0.9794, "val_f1_ponte": 0.9646, "val_acc_global": 0.9825}
+{"epoca": 56, "loss": 0.03789305807929486, "lr": 0.0005656162735025292, "tempo_s": 27.0}
+{"epoca": 57, "loss": 0.03494886233005673, "lr": 0.0005373354598274027, "tempo_s": 26.9}
+{"epoca": 58, "loss": 0.035948378963395956, "lr": 0.0005104686868360325, "tempo_s": 26.9}
+{"epoca": 59, "loss": 0.04927579052746296, "lr": 0.0004849452524942309, "tempo_s": 27.1}
+{"epoca": 60, "loss": 0.03638502486795187, "lr": 0.00046069798986951934, "tempo_s": 27.1, "val_iou_ambiente": 0.9771, "val_iou_ponte": 0.9318, "val_miou": 0.9544, "val_precisao_ponte": 0.9513, "val_recall_ponte": 0.9786, "val_f1_ponte": 0.9647, "val_acc_global": 0.9825}
+{"epoca": 61, "loss": 0.03756110562942922, "lr": 0.0004376630903760434, "tempo_s": 27.1}
+{"epoca": 62, "loss": 0.04193304284755141, "lr": 0.00041577993585724117, "tempo_s": 27.3}
+{"epoca": 63, "loss": 0.04156037120707333, "lr": 0.0003949909390643791, "tempo_s": 26.9}
+{"epoca": 64, "loss": 0.03617184159113094, "lr": 0.0003752413921111601, "tempo_s": 26.9}
+{"epoca": 65, "loss": 0.044529503535479305, "lr": 0.00035647932250560207, "tempo_s": 26.9, "val_iou_ambiente": 0.9778, "val_iou_ponte": 0.934, "val_miou": 0.9559, "val_precisao_ponte": 0.9525, "val_recall_ponte": 0.9797, "val_f1_ponte": 0.9659, "val_acc_global": 0.9831}
+{"epoca": 66, "loss": 0.03680868191178888, "lr": 0.00033865535638032194, "tempo_s": 26.8}
+{"epoca": 67, "loss": 0.04315941985975951, "lr": 0.00032172258856130585, "tempo_s": 26.9}
+{"epoca": 68, "loss": 0.03479297246877104, "lr": 0.0003056364591332405, "tempo_s": 27.0}
+{"epoca": 69, "loss": 0.03675940507696941, "lr": 0.0002903546361765785, "tempo_s": 26.9}
+{"epoca": 70, "loss": 0.03388098732102662, "lr": 0.00027583690436774953, "tempo_s": 27.0, "val_iou_ambiente": 0.9771, "val_iou_ponte": 0.9321, "val_miou": 0.9546, "val_precisao_ponte": 0.9497, "val_recall_ponte": 0.9805, "val_f1_ponte": 0.9649, "val_acc_global": 0.9826}
+{"epoca": 71, "loss": 0.033620782869402316, "lr": 0.00026204505914936203, "tempo_s": 26.8}
+{"epoca": 72, "loss": 0.035234123790171, "lr": 0.00024894280619189394, "tempo_s": 26.9}
+{"epoca": 73, "loss": 0.036590860470663754, "lr": 0.00023649566588229923, "tempo_s": 27.2}
+{"epoca": 74, "loss": 0.033032287369482216, "lr": 0.00022467088258818426, "tempo_s": 27.0}
+{"epoca": 75, "loss": 0.03490408416371792, "lr": 0.00021343733845877503, "tempo_s": 26.9, "val_iou_ambiente": 0.9777, "val_iou_ponte": 0.9338, "val_miou": 0.9557, "val_precisao_ponte": 0.952, "val_recall_ponte": 0.9799, "val_f1_ponte": 0.9657, "val_acc_global": 0.983}
+{"epoca": 76, "loss": 0.034429533097893, "lr": 0.00020276547153583627, "tempo_s": 26.9}
+{"epoca": 77, "loss": 0.03465990513097495, "lr": 0.00019262719795904446, "tempo_s": 26.9}
+{"epoca": 78, "loss": 0.03482464926317334, "lr": 0.00018299583806109224, "tempo_s": 27.2}
+{"epoca": 79, "loss": 0.03216746366117149, "lr": 0.0001738460461580376, "tempo_s": 26.9}
+{"epoca": 80, "loss": 0.04308957652188838, "lr": 0.00016515374385013573, "tempo_s": 27.1, "val_iou_ambiente": 0.9786, "val_iou_ponte": 0.9361, "val_miou": 0.9573, "val_precisao_ponte": 0.9574, "val_recall_ponte": 0.9768, "val_f1_ponte": 0.967, "val_acc_global": 0.9837, "melhor": true}
+{"epoca": 81, "loss": 0.03328768195956945, "lr": 0.00015689605665762893, "tempo_s": 26.9}
+{"epoca": 82, "loss": 0.03614567680563778, "lr": 0.00014905125382474747, "tempo_s": 27.1}
+{"epoca": 83, "loss": 0.03579484916571528, "lr": 0.0001415986911335101, "tempo_s": 27.0}
+{"epoca": 84, "loss": 0.033970339459367095, "lr": 0.00013451875657683458, "tempo_s": 27.0}
+{"epoca": 85, "loss": 0.03454081868799403, "lr": 0.00012779281874799285, "tempo_s": 27.0, "val_iou_ambiente": 0.9771, "val_iou_ponte": 0.9321, "val_miou": 0.9546, "val_precisao_ponte": 0.9498, "val_recall_ponte": 0.9803, "val_f1_ponte": 0.9648, "val_acc_global": 0.9826}
+{"epoca": 86, "loss": 0.03587113723997027, "lr": 0.0001214031778105932, "tempo_s": 26.9}
+{"epoca": 87, "loss": 0.03562179287709296, "lr": 0.00011533301892006353, "tempo_s": 26.8}
+{"epoca": 88, "loss": 0.03584643995668739, "lr": 0.00010956636797406035, "tempo_s": 26.9}
+{"epoca": 89, "loss": 0.033469007588922975, "lr": 0.00010408804957535733, "tempo_s": 27.1}
+{"epoca": 90, "loss": 0.03453769994527101, "lr": 9.888364709658946e-05, "tempo_s": 27.5, "val_iou_ambiente": 0.9775, "val_iou_ponte": 0.9331, "val_miou": 0.9553, "val_precisao_ponte": 0.952, "val_recall_ponte": 0.9791, "val_f1_ponte": 0.9654, "val_acc_global": 0.9829}
+{"epoca": 91, "loss": 0.03574840848241002, "lr": 9.393946474175998e-05, "tempo_s": 27.6}
+{"epoca": 92, "loss": 0.034449112631380556, "lr": 8.924249150467197e-05, "tempo_s": 27.8}
+{"epoca": 93, "loss": 0.05110337640997022, "lr": 8.478036692943837e-05, "tempo_s": 27.7}
+{"epoca": 94, "loss": 0.03504436859907582, "lr": 8.054134858296645e-05, "tempo_s": 27.7}
+{"epoca": 95, "loss": 0.03986362692434341, "lr": 7.651428115381812e-05, "tempo_s": 27.6, "val_iou_ambiente": 0.9772, "val_iou_ponte": 0.9322, "val_miou": 0.9547, "val_precisao_ponte": 0.9506, "val_recall_ponte": 0.9796, "val_f1_ponte": 0.9649, "val_acc_global": 0.9826}
+{"epoca": 96, "loss": 0.030824735900387167, "lr": 7.268856709612721e-05, "tempo_s": 27.6}
+{"epoca": 97, "loss": 0.03524684350937605, "lr": 6.905413874132085e-05, "tempo_s": 27.8}
+{"epoca": 98, "loss": 0.0329747432069853, "lr": 6.56014318042548e-05, "tempo_s": 27.6}
+{"epoca": 99, "loss": 0.03799173887609504, "lr": 6.232136021404205e-05, "tempo_s": 27.4}
+{"epoca": 100, "loss": 0.03464022880606353, "lr": 5.920529220333995e-05, "tempo_s": 26.9, "val_iou_ambiente": 0.9767, "val_iou_ponte": 0.9309, "val_miou": 0.9538, "val_precisao_ponte": 0.9485, "val_recall_ponte": 0.9805, "val_f1_ponte": 0.9642, "val_acc_global": 0.9823}

@@ -1,0 +1,5 @@
+*.ply
+*.npz
+.env
+env
+*.pt

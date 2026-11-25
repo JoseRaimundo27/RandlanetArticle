@@ -1,0 +1,2 @@
+{"epoca": 1, "loss": 0.6611256018280983, "lr": 0.0095, "tempo_s": 4.2, "val_iou_ambiente": 0.0, "val_iou_ponte": 0.2439, "val_miou": 0.1219, "val_precisao_ponte": 0.2439, "val_recall_ponte": 1.0, "val_f1_ponte": 0.3921, "val_acc_global": 0.2439, "melhor": true}
+{"epoca": 2, "loss": 0.5405929312109947, "lr": 0.009025, "tempo_s": 2.7, "val_iou_ambiente": 0.0068, "val_iou_ponte": 0.2451, "val_miou": 0.126, "val_precisao_ponte": 0.2451, "val_recall_ponte": 1.0, "val_f1_ponte": 0.3937, "val_acc_global": 0.249, "melhor": true}
