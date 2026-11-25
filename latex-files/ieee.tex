@@ -1,12 +1,14 @@
 \documentclass[conference]{IEEEtran}
 \IEEEoverridecommandlockouts
-% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+% The preceding line is only needed toy funding in the first footnote. If that is unneeded, please comment it out.
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
+\usepackage{booktabs}
+
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
@@ -14,7 +16,7 @@
 \title{Conference Paper Title*\\
 {\footnotesize \textsuperscript{*}Note: Sub-titles are not captured in Xplore and
 should not be used}
-\thanks{Identify applicable funding agency here. If none, delete this.}
+
 }
 
 \author{\IEEEauthorblockN{1\textsuperscript{st} José Raimundo Alves dos Santos Júnior}
@@ -43,43 +45,120 @@ or Math in Paper Title or Abstract.
 component, formatting, style, styling, insert
 \end{IEEEkeywords}
 
-\section{Introduction}
-O monitoramento de progresso é um dos elos fundamentais para gestão de projetos, auxiliando na conclusão bem sucedida da construção de edificações e infraestruturas (Pal et al., 2023). Na construção de Obras de Arte Especiais (OAE), como as pontes, as condições diferem significativamente das edificações convencionais, caracterizando-se por processos altamente setorizados, distribuição espacial discreta e uso intensivo de componentes pré-fabricados (Zhang, 2023). Embora essas estruturas apresentem padrões geométricos repetitivos e similares, a extensão do canteiro e a complexidade logística impõem desafios severos à gestão e ao acompanhamento físico do projeto (Zhang, 2023).   Os métodos tradicionais de monitoramento do progresso baseiam-se em registros manuais, inspeções in loco e atualizações em planilhas ou papel (Pal et al., 2023). Essa abordagem apresenta desvantagens críticas: é excessivamente morosa, trabalhosa, propensa a erros humanos e influenciada pela subjetividade dos inspetores (Qureshi et al., 2023). Devido à incapacidade de abranger a totalidade do canteiro com alta frequência, os dados coletados ficam rapidamente desatualizados, tornando a tomada de decisão reativa e propiciando atrasos e estouros de orçamento (Reja et al., 2022). Ademais, a simples captura visual do canteiro sem processamento automatizado não soluciona o problema, pois apenas transfere o gargalo operacional do campo para o escritório.   Nesse cenário, a integração de ferramentas como a Modelagem da Informação da Construção (BIM) a técnicas de Visão Computacional e Inteligência Artificial tem se consolidado como a via mais eficiente para o monitoramento automatizado (Pal et al., 2023). O uso de Aprendizado Profundo (Deep Learning) permite processar dados visuais complexos, como nuvens de pontos, comparando o modelo planejado (as-planned) com a execução real (as-built) para extrair informações objetivas de avanço (Reja et al., 2022; Braun et al., 2020).   Apesar desses avanços, a literatura e as aplicações de monitoramento automatizado ainda concentram-se majoritariamente em edificações verticais, revelando uma lacuna no desenvolvimento de fluxos adaptados às especificidades geométricas e operacionais das pontes. Portanto, este trabalho propõe um fluxo semi-automatizado para o monitoramento de pontes, integrando fotogrametria, segmentação de nuvens de pontos por IA (RandLA-Net) e algoritmos de alinhamento geométrico (OBB-ICP) ao modelo BIM 4D, visando eliminar a carga manual, fornecer dados acionáveis aos gestores e mitigar ineficiências construtivas.   
+\section{Introdução}
+O monitoramento de progresso é um dos elos fundamentais para gestão de projetos, auxiliando na conclusão bem sucedida da construção de edificações e infraestruturas \cite{Pal2023}. Na construção de Obras de Arte Especiais (OAE), como as pontes, as condições diferem significativamente das edificações convencionais, caracterizando-se por processos altamente setorizados, distribuição espacial discreta e uso intensivo de componentes pré-fabricados \cite{Zhang2025}. Embora essas estruturas apresentem padrões geométricos repetitivos e similares, a extensão do canteiro e a complexidade logística impõem desafios severos à gestão e ao acompanhamento físico do projeto \cite{Zhang2025}.
+
+Os métodos tradicionais de monitoramento do progresso se baseiam em registros manuais, inspeções \textit{in loco} e atualizações em planilhas ou papel \cite{Pal2023}. Nesse sentido, essa abordagem apresenta desvantagens críticas: é excessivamente lenta, trabalhosa, propensa a erros humanos e influenciada pela subjetividade dos inspetores \cite{Qureshi2023}. Devido à incapacidade coletar dados do canteiro com alta frequência, os dados coletados ficam rapidamente desatualizados, tornando a tomada de decisão reativa e propiciando atrasos e estouros de orçamento \cite{Reja2022}. Ademais, a simples captura visual do canteiro sem processamento automatizado não soluciona o problema, pois apenas transfere o gargalo operacional do campo para o escritório.  
 
 
-\section*{References}
 
-Please number citations consecutively within brackets \cite{b1}. The 
-sentence punctuation follows the bracket \cite{b2}. Refer simply to the reference 
-number, as in \cite{b3}---do not use ``Ref. \cite{b3}'' or ``reference \cite{b3}'' except at 
-the beginning of a sentence: ``Reference \cite{b3} was the first $\ldots$''
+Nesse cenário, a integração de ferramentas como a Modelagem da Informação da Construção (BIM) a técnicas de Visão Computacional (CV) em Inteligência Artificia (IA) tem se consolidado como a via mais eficiente para o monitoramento automatizado \cite{Pal2023}. O uso de \textit{Deep Learning} permite processar dados visuais complexos, como nuvens de pontos, visando comparar o modelo planejado (\textit{as-planned}) com a execução real (\textit{as-built}) para extrair informações objetivas de avanço \cite{Reja2022,Braun2020 }.  
 
-Number footnotes separately in superscripts. Place the actual footnote at 
-the bottom of the column in which it was cited. Do not put footnotes in the 
-abstract or reference list. Use letters for table footnotes.
+Apesar desses avanços, a literatura e as aplicações de monitoramento automatizado ainda concentram-se majoritariamente em edificações verticais, revelando uma lacuna no desenvolvimento de fluxos adaptados às especificidades geométricas e operacionais das pontes. Portanto, este trabalho propõe aplicar a eliminação de ruídos de nuvens de pontos utilizando \textit{deep learning} (RandLA-Net) como etapa necessária para aplicar um fluxo semi-automatizado para o monitoramento do progresso de pontes. O resultado da eliminação de ruídos terá uso em futuros algoritmos de alinhamento geométrico, visando eliminar a carga manual, fornecer dados acionáveis aos gestores e mitigar ineficiências construtivas.
 
-Unless there are six authors or more give all authors' names; do not use 
-``et al.''. Papers that have not been published, even if they have been 
-submitted for publication, should be cited as ``unpublished'' \cite{b4}. Papers 
-that have been accepted for publication should be cited as ``in press'' \cite{b5}. 
-Capitalize only the first word in a paper title, except for proper nouns and 
-element symbols.
 
-For papers published in translation journals, please give the English 
-citation first, followed by the original foreign-language citation \cite{b6}.
+\section{Revisão Bibliográfica}
+
+\section{Descrição dos métodos utilizados}
+\subsection{RandLaNET}
+\subsection{Dados Utilizados}
+\subsubsection{SemanticBridge}
+
+Para o treinamento, foram utilizados os dados públicos do SemanticBridge~\cite{SemanticBridge}, disponibilizados sob a licença CC-BY-4.0. O conjunto reúne 27 nuvens de pontos de 20 pontes, adquiridas com três tecnologias de escaneamento diferentes:
+\begin{itemize}
+	\item \textbf{FARO} (escâner laser terrestre, TLS): 10 cenas, com distância mediana entre vizinhos de 4,0 a 5,6~cm;
+	\item \textbf{Leica RTC360} (TLS): 10 cenas, com 2,3 a 2,9~cm;
+	\item \textbf{Leica BLK2GO} (escâner laser móvel, MLS): 7 cenas, com 2,3 a 3,7~cm.
+\end{itemize}
+Todas as nuvens possuem informação de cor (RGB). Sete pontes (12, 13 e 15 a 19) foram capturadas por dois sensores (BLK2GO e RTC360), de modo que o mesmo local aparece em duas nuvens.
+
+Cada ponto possui um rótulo binário (ponte ou ambiente), derivado das classes de componentes do conjunto. Os pontos sem rótulo, entre 0,3\% e 1,9\% de cada cena, foram ignorados no treinamento e na avaliação.
+
+Os dados foram divididos em treinamento, validação e teste na proporção aproximada de 63\%, 18,5\% e 18,5\% das cenas (17, 5 e 5 cenas, respectivamente), conforme a Tabela~\ref{tab:divisao}. O sorteio das pontes foi estratificado por grupo de sensor (FARO e Leica), com semente fixa. O conjunto de teste contém as pontes 5 e 7 (FARO) e 13 e 20 (Leica).
+
+\begin{table}[htbp]
+	\centering
+	\caption{Divisão dos dados do SemanticBridge.}
+	\label{tab:divisao}
+	\begin{tabular}{lccc}
+		\toprule
+		Conjunto & Pontes & Cenas & Proporção das cenas \\
+		\midrule
+		Treinamento & 12 & 17 & 63,0\% \\
+		Validação   &  4 &  5 & 18,5\% \\
+		Teste       &  4 &  5 & 18,5\% \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\subsubsection{Dados do Getec}
+	
+Os dados fazem parte do projeto de pesquisa Método automatizado para monitoramento do avanço físico de obras de infraestrutura com uso do BIM 4D e fotogrametria que está sendo conduzido pelo Grupo de Pesquisa e Extensão em Gestão e Tecnologia das Construções (GETEC) em parceria com uma concessionária de infraestrutura de grande porte, reconhecida por sua atuação abrangente em obras e serviços de transporte na América Latina.
+
+A obra analisada localiza-se na Via Dutra (BR-116), no estado do Rio de Janeiro, abrangendo um trecho de 16 km (8 km por sentido), que inclui a construção de 93 contenções e 24 obras de arte especiais. 
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.45\textwidth]{figs/obra_real.png}
+	\caption{Registro fotográfico da obra real.}
+	\label{fig:obra_real}
+\end{figure}
+
+As Obras de Artes Especiais (OAE), escolhidas durante essa fase do projeto foram as nomeadas D19 e S07 por estarem em fases distintas de construção, permitindo discussões sobre o uso das ferramentas, parâmetros e processos em diferentes cenários. OAE D19 trata-se de um viaduto composto por 18 pilares, 67 vigas e com aproximadamente 425 m de extensão de pavimento. A OAE S07 é composta por 8 pilares, 38 vigas e com aproximadamente 222m de extensão. Neste estudo as essas OAEs foram utilizadas para validação do modelo.
+
+\section{Resultados}
+
+\section{Conclusão}
+
+
 
 \begin{thebibliography}{00}
-\bibitem{b1} G. Eason, B. Noble, and I. N. Sneddon, ``On certain integrals of Lipschitz-Hankel type involving products of Bessel functions,'' Phil. Trans. Roy. Soc. London, vol. A247, pp. 529--551, April 1955.
-\bibitem{b2} J. Clerk Maxwell, A Treatise on Electricity and Magnetism, 3rd ed., vol. 2. Oxford: Clarendon, 1892, pp.68--73.
-\bibitem{b3} I. S. Jacobs and C. P. Bean, ``Fine particles, thin films and exchange anisotropy,'' in Magnetism, vol. III, G. T. Rado and H. Suhl, Eds. New York: Academic, 1963, pp. 271--350.
-\bibitem{b4} K. Elissa, ``Title of paper if known,'' unpublished.
-\bibitem{b5} R. Nicole, ``Title of paper with only first word capitalized,'' J. Name Stand. Abbrev., in press.
-\bibitem{b6} Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, ``Electron spectroscopy studies on magneto-optical media and plastic substrate interface,'' IEEE Transl. J. Magn. Japan, vol. 2, pp. 740--741, August 1987 [Digests 9th Annual Conf. Magnetics Japan, p. 301, 1982].
-\bibitem{b7} M. Young, The Technical Writer's Handbook. Mill Valley, CA: University Science, 1989.
+
+\bibitem{SemanticBridge}
+	M. Kellner, M. Ferrandon Cervantes, Y. Pan, R. Lu, I. Brilakis, and A. Reiterer,
+	``SemanticBridge---A dataset for 3D semantic segmentation of bridges and domain gap analysis,''
+	\textit{Developments in the Built Environment},
+	vol. 26, Art. no. 100912, 2026,
+	doi: 10.1016/j.dibe.2026.100912.
+	
+\bibitem{Pal2023}
+	A. Pal, J. J. Lin, S.-H. Hsieh, and M. Golparvar-Fard,
+	``Automated vision-based construction progress monitoring in built environment through digital twin,''
+	\textit{Developments in the Built Environment},
+	vol. 16, 2023, Art. no. 100247,
+	doi: 10.1016/j.dibe.2023.100247.
+	
+\bibitem{Zhang2025}
+	H. Zhang, J. Yan, J. Yang, W. Meng, and S. Chen,
+``Two-stage point cloud registration using multi-scale edge convolution for digital twin-based bridge construction progress monitoring,''
+\textit{Automation in Construction},
+vol. 179, Art. no. 106415, 2025,
+doi: 10.1016/j.autcon.2025.106415.
+
+\bibitem{Qureshi2023}
+	A. H. Qureshi, W. S. Alaloul, W. K. Wing, S. Saad, M. A. Musarat, S. Ammad, and A. F. Kineber,
+``Automated progress monitoring technological model for construction projects,''
+\textit{Ain Shams Engineering Journal},
+vol. 14, no. 10, Art. no. 102165, 2023,
+doi: 10.1016/j.asej.2023.102165.
+
+\bibitem{Reja2022}
+V. K. Reja, K. Varghese, and Q. P. Ha,
+``Computer vision-based construction progress monitoring,''
+\textit{Automation in Construction},
+vol. 138, Art. no. 104245, 2022,
+doi: [inserir DOI].
+
+\bibitem{Braun2020}
+A. Braun, S. Tuttas, A. Borrmann, and U. Stilla,
+``Improving progress monitoring by fusing point clouds, semantic data and computer vision,''
+\textit{Automation in Construction},
+vol. 116, Art. no. 103210, 2020,
+doi: 10.1016/j.autcon.2020.103210.
+
+
 \end{thebibliography}
-\vspace{12pt}
-\color{red}
-IEEE conference templates contain guidance text for composing and formatting conference papers. Please ensure that all template text is removed from your conference paper prior to submission to the conference. Failure to remove the template text from your paper may result in your paper not being published.
+
 
 \end{document}
 
