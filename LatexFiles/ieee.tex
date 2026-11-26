@@ -58,9 +58,38 @@ Apesar desses avanços, a literatura e as aplicações de monitoramento automati
 
 
 \section{Revisão Bibliográfica}
+A RandLA-Net é uma arquitetura de rede neural profunda desenvolvida para a segmentação semântica de grandes nuvens de pontos. Sua proposta combina duas estratégias principais: a amostragem aleatória (\textit{Random Sampling}) e a agregação local de características (\textit{Local Feature Aggregation}). Essa combinação permite reduzir progressivamente a quantidade de pontos processados pela rede, mantendo informações geométricas relevantes para a tarefa de segmentação.
 
 \section{Descrição dos métodos utilizados}
 \subsection{RandLaNET}
+
+A arquitetura do RandLA-NET utilizada foi baseada no (Hu et al., 2020) \cite{hu2020randlanet}.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{figs/randlanet-downsample.png}
+	\caption{Processo de subamostragem de pontos na RandLA-Net. \cite{hu2020randlanet}}
+	\label{fig:randlanet-downsample}
+\end{figure}
+
+\begin{figure*}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figs/randlanet-arq.png}
+	\caption{Arquitetura da rede RandLA-Net. \cite{hu2020randlanet}}
+	\label{fig:randlanet-arq}
+\end{figure*}
+
+Para trabalhar com nuvens de pontos de larga escala e tornar esse processo computacionalmente viável, a arquitetura RandLA-Net realiza uma redução da quantidade de pontos (\textit{downsampling}) com base na Figura~\ref{fig:randlanet-downsample}.
+
+A arquitetura combina dois mecanismos complementares: \textit{Random Sampling} e \textit{Local Feature Aggregation}. O \textit{Random Sampling} utiliza amostragem aleatória para selecionar pontos da nuvem, priorizando eficiência computacional e escabilidade. Para compensar a possível perda de informações pelo \textit{Random Sampling}, o \textit{Local Feature Aggregation} extrai e agrega característica dos pontos vizinhos, buscando preservar informações relevantes. 
+
+A Figura \ref{fig:randlanet-arq} detalha o módulo \textit{Local Feature Aggregation}. Ele é composto por três unidades: \textit{Local Spatial Encoding} (LocSE), \textit{Attentive Pooling} e \textit{Dilated Residual Block}. Essas unidades permitem incorporar informações geométricas locais e agregar características dos pontos vizinhos durante o processamento da nuvem.
+
+\subsubsection{Local Spatial Encoding}
+
+A unidade \textit{LocSE} incorpora informações geométricas locais às características dos pontos. Inicialmente, identifica os $K$ vizinhos mais próximos de cada ponto por meio do algoritmo KNN, considerando a distância euclidiana. Em seguida, codifica as relações espaciais entre o ponto central e seus vizinhos por meio de uma \textit{multiple layer perceptron}(MLP), utilizando suas coordenadas, diferenças posicionais e distâncias. Por fim, essas representações espaciais são concatenadas às características originais dos vizinhos, enriquecendo sua representação com informações geométricas locais.
+
+\subsubsection{Attentive Pooling}
 \subsection{Dados Utilizados}
 \subsubsection{SemanticBridge}
 
@@ -155,6 +184,12 @@ A. Braun, S. Tuttas, A. Borrmann, and U. Stilla,
 \textit{Automation in Construction},
 vol. 116, Art. no. 103210, 2020,
 doi: 10.1016/j.autcon.2020.103210.
+
+\bibitem{hu2020randlanet}
+Q. Hu, B. Yang, L. Xie, S. Rosa, Y. Guo, Z. Wang, N. Trigoni, and A. Markham,
+``RandLA-Net: Efficient Semantic Segmentation of Large-Scale Point Clouds,''
+\textit{arXiv preprint arXiv:1911.11236}, 2020.
+[Online]. Available: https://arxiv.org/abs/1911.11236.
 
 
 \end{thebibliography}
