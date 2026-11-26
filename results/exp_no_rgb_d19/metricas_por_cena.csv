@@ -1,0 +1,2 @@
+cena,n_pontos,iou_ambiente,iou_ponte,miou,precisao_ponte,recall_ponte,f1_ponte,acc_global
+d19.npz,8202187,0.8865,0.3849,0.6357,0.7596,0.4383,0.5558,0.894

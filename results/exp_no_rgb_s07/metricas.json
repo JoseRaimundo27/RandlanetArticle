@@ -1,0 +1,31 @@
+{
+  "resumo": {
+    "checkpoint": "runs/exp_no_rgb/best.pt",
+    "epoca": 35,
+    "n_cenas": 1,
+    "agregado": {
+      "iou_ambiente": 0.8842,
+      "iou_ponte": 0.1513,
+      "miou": 0.5177,
+      "precisao_ponte": 0.5326,
+      "recall_ponte": 0.1745,
+      "f1_ponte": 0.2628,
+      "acc_global": 0.8865
+    },
+    "media_por_cena_iou_ponte": 0.1513,
+    "desvio_por_cena_iou_ponte": 0.0
+  },
+  "cenas": [
+    {
+      "cena": "s07.npz",
+      "n_pontos": 10864500,
+      "iou_ambiente": 0.8842,
+      "iou_ponte": 0.1513,
+      "miou": 0.5177,
+      "precisao_ponte": 0.5326,
+      "recall_ponte": 0.1745,
+      "f1_ponte": 0.2628,
+      "acc_global": 0.8865
+    }
+  ]
+}

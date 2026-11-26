@@ -8,7 +8,7 @@ DataLoader (common.build_inputs), como no codigo original.
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-
+git 
 
 def mlp(c_in, c_out, bn=True, act=True):
     layers = [nn.Conv2d(c_in, c_out, 1, bias=not bn)]

@@ -1,0 +1,75 @@
+{
+  "resumo": {
+    "checkpoint": "runs/exp_no_rgb/best.pt",
+    "epoca": 35,
+    "n_cenas": 5,
+    "agregado": {
+      "iou_ambiente": 0.9545,
+      "iou_ponte": 0.8985,
+      "miou": 0.9265,
+      "precisao_ponte": 0.9534,
+      "recall_ponte": 0.9397,
+      "f1_ponte": 0.9465,
+      "acc_global": 0.9675
+    },
+    "media_por_cena_iou_ponte": 0.8463,
+    "desvio_por_cena_iou_ponte": 0.1304
+  },
+  "cenas": [
+    {
+      "cena": "bridge_13_fr_blk.npz",
+      "n_pontos": 447981,
+      "iou_ambiente": 0.9634,
+      "iou_ponte": 0.5969,
+      "miou": 0.7802,
+      "precisao_ponte": 0.9137,
+      "recall_ponte": 0.6325,
+      "f1_ponte": 0.7475,
+      "acc_global": 0.9653
+    },
+    {
+      "cena": "bridge_13_fr_rtc.npz",
+      "n_pontos": 445505,
+      "iou_ambiente": 0.9909,
+      "iou_ponte": 0.8835,
+      "miou": 0.9372,
+      "precisao_ponte": 0.9335,
+      "recall_ponte": 0.9428,
+      "f1_ponte": 0.9382,
+      "acc_global": 0.9915
+    },
+    {
+      "cena": "bridge_20_fr_rtc.npz",
+      "n_pontos": 949067,
+      "iou_ambiente": 0.9272,
+      "iou_ponte": 0.8671,
+      "miou": 0.8971,
+      "precisao_ponte": 0.9198,
+      "recall_ponte": 0.9381,
+      "f1_ponte": 0.9288,
+      "acc_global": 0.9506
+    },
+    {
+      "cena": "bridge_5_cb_faro.npz",
+      "n_pontos": 670436,
+      "iou_ambiente": 0.9856,
+      "iou_ponte": 0.979,
+      "miou": 0.9823,
+      "precisao_ponte": 0.9893,
+      "recall_ponte": 0.9894,
+      "f1_ponte": 0.9894,
+      "acc_global": 0.9914
+    },
+    {
+      "cena": "bridge_7_cb_faro.npz",
+      "n_pontos": 539218,
+      "iou_ambiente": 0.8972,
+      "iou_ponte": 0.9049,
+      "miou": 0.9011,
+      "precisao_ponte": 0.9648,
+      "recall_ponte": 0.9358,
+      "f1_ponte": 0.9501,
+      "acc_global": 0.948
+    }
+  ]
+}
